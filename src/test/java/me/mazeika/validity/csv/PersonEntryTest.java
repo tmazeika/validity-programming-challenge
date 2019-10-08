@@ -118,7 +118,7 @@ public class PersonEntryTest
     public void testGetStateLong()
     {
         assertEquals("California", this.kaleGipp.getStateLong());
-        assertEquals("Florida", this.analiseDoorbar.getZip());
+        assertEquals("Florida", this.analiseDoorbar.getStateLong());
     }
 
     @Test

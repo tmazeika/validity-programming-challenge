@@ -56,6 +56,8 @@ public class PersonEntry
             }
         }
 
+        columns.add(colBuilder.toString());
+
         Validation.requireThat("Must have exactly " + COLUMN_COUNT + " columns",
                 columns.size() == COLUMN_COUNT);
 
