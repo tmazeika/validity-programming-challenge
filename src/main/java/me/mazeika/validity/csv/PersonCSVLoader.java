@@ -25,6 +25,13 @@ public class PersonCSVLoader
         this.csvFile = new File(file);
     }
 
+    /**
+     * Loads the people from the CSV file.
+     *
+     * @return a list of people
+     *
+     * @throws IOException when an exception occurs during reading
+     */
     public List<PersonEntry> loadPeople() throws IOException
     {
         final List<PersonEntry> entries = new ArrayList<>();
@@ -40,7 +47,8 @@ public class PersonCSVLoader
                 // skip the header
                 if (afterHeader) {
                     entries.add(new PersonEntry(line));
-                } else {
+                }
+                else {
                     afterHeader = true;
                 }
             }
