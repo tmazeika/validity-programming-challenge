@@ -1,4 +1,5 @@
 plugins {
+    application
     java
 }
 
@@ -12,6 +13,8 @@ repositories {
 dependencies {
     testCompile("junit:junit:4.12")
 }
+
+application.mainClassName = "me.mazeika.validity.Validity"
 
 configure<JavaPluginConvention> {
     sourceCompatibility = JavaVersion.VERSION_1_10
