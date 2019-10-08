@@ -89,7 +89,7 @@ public class PersonEntry
      */
     public int getId()
     {
-        return this.id; // TODO
+        return this.id;
     }
 
     /**
@@ -99,7 +99,7 @@ public class PersonEntry
      */
     public String getFirstName()
     {
-        return this.firstName; // TODO
+        return this.firstName;
     }
 
     /**
@@ -109,7 +109,7 @@ public class PersonEntry
      */
     public String getLastName()
     {
-        return this.lastName; // TODO
+        return this.lastName;
     }
 
     /**
@@ -119,7 +119,7 @@ public class PersonEntry
      */
     public String getCompany()
     {
-        return this.company; // TODO
+        return this.company;
     }
 
     /**
@@ -129,7 +129,7 @@ public class PersonEntry
      */
     public String getEmail()
     {
-        return this.email; // TODO
+        return this.email;
     }
 
     /**
@@ -139,7 +139,7 @@ public class PersonEntry
      */
     public String getAddress1()
     {
-        return this.address1; // TODO
+        return this.address1;
     }
 
     /**
@@ -149,7 +149,7 @@ public class PersonEntry
      */
     public String getAddress2()
     {
-        return this.address2; // TODO
+        return this.address2;
     }
 
     /**
@@ -159,7 +159,7 @@ public class PersonEntry
      */
     public String getZip()
     {
-        return this.zip; // TODO
+        return this.zip;
     }
 
     /**
@@ -169,7 +169,7 @@ public class PersonEntry
      */
     public String getCity()
     {
-        return this.city; // TODO
+        return this.city;
     }
 
     /**
@@ -180,7 +180,7 @@ public class PersonEntry
      */
     public String getStateLong()
     {
-        return this.stateLong; // TODO
+        return this.stateLong;
     }
 
     /**
@@ -191,7 +191,7 @@ public class PersonEntry
      */
     public String getStateShort()
     {
-        return this.stateShort; // TODO
+        return this.stateShort;
     }
 
     /**
@@ -201,7 +201,7 @@ public class PersonEntry
      */
     public String getPhone()
     {
-        return this.phone; // TODO
+        return this.phone;
     }
 
     /**
@@ -212,6 +212,6 @@ public class PersonEntry
     @Override
     public String toString()
     {
-        return null; // TODO
+        return null;
     }
 }
