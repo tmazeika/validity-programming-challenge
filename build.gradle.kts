@@ -11,6 +11,8 @@ repositories {
 }
 
 dependencies {
+    compile("org.apache.commons:commons-text:1.8")
+
     testCompile("junit:junit:4.12")
 }
 

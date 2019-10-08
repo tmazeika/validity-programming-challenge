@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Represents tests for PersonEntry.
@@ -33,13 +34,16 @@ public class PersonEntryTest
     @Test(expected = IllegalArgumentException.class)
     public void testConstructorBadId()
     {
-        new PersonEntry("O,Donalt,Canter,Gottlieb Group,dcanter0@nydailynews" + ".com,9 Homewood Alley,,50335,Des Moines,Iowa,IA,515-601-4495");
+        new PersonEntry("O,Donalt,Canter,Gottlieb Group,dcanter0@nydailynews" +
+                ".com,9 Homewood Alley,,50335,Des Moines,Iowa,IA,515-601-4495");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testConstructorTooFewArgs()
     {
-        new PersonEntry("3,Akim,McAlpine,\"Quitzon, Schaefer and Gleason\"," + "amcalpine2@goo.gl,4 Kipling Drive,,93721,Fresno,California," + "CA");
+        new PersonEntry("3,Akim,McAlpine,\"Quitzon, Schaefer and Gleason\"," +
+                "amcalpine2@goo.gl,4 Kipling Drive,,93721,Fresno,California," +
+                "CA");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -132,5 +136,29 @@ public class PersonEntryTest
     {
         assertEquals("707-840-2551", this.kaleGipp.getPhone());
         assertEquals("305-604-6702", this.analiseDoorbar.getPhone());
+    }
+
+    @Test
+    public void testToString()
+    {
+        assertEquals("4,Kale,Gipp,Klein Group," +
+                "kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma," +
+                "California,CA,707-840-2551", this.kaleGipp.toString());
+        assertEquals("5,Analise,Doorbar,Stamm-Pagac," +
+                "adoorbar4@mit.edu,2340 Dennis Center,Apt 11,33180,Miami," +
+                "Florida,FL,305-604-6702", this.analiseDoorbar.toString());
+    }
+
+    @Test
+    public void testEquals()
+    {
+        assertEquals(this.kaleGipp, this.kaleGipp);
+        assertEquals(this.kaleGipp, this.kaleGipp);
+        assertEquals(new PersonEntry("4,Kale,Gipp,Klein Group," +
+                "kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma," +
+                "California,CA,707-840-2551"), this.kaleGipp);
+        assertNotEquals(new PersonEntry("4,Kale,Gipp,Klein Group," +
+                "kgipp3@360.cn,4986 Menomonie Drive,,94975,Petaluma," +
+                "California,CA,707-840-2551"), this.kaleGipp);
     }
 }

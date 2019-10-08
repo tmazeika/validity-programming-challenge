@@ -212,6 +212,27 @@ public class PersonEntry
     @Override
     public String toString()
     {
-        return null;
+        return this.raw;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PersonEntry that = (PersonEntry) o;
+        return raw.equals(that.raw);
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(raw);
     }
 }
