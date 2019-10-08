@@ -45,7 +45,7 @@ public class PersonCSVLoaderTest
         assertEquals("43 Grover Parkway", person2.getAddress1());
         assertEquals("", person3.getAddress2());
         assertEquals("50335", person1.getZip());
-        assertEquals("Des Moines", person2.getCity());
+        assertEquals("Atlanta", person2.getCity());
         assertEquals("California", person3.getStateLong());
         assertEquals("IA", person1.getStateShort());
         assertEquals("770-271-7837", person2.getPhone());

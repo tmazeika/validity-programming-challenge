@@ -29,11 +29,20 @@ public class PersonCSVLoader
     {
         final List<PersonEntry> entries = new ArrayList<>();
 
+        boolean afterHeader = false;
+
         try (final InputStreamReader reader = new FileReader(this.csvFile);
              final Scanner scanner = new Scanner(reader)) {
 
             while (scanner.hasNextLine()) {
-                entries.add(new PersonEntry(scanner.nextLine()));
+                final String line = scanner.nextLine();
+
+                // skip the header
+                if (afterHeader) {
+                    entries.add(new PersonEntry(line));
+                } else {
+                    afterHeader = true;
+                }
             }
         }
 
