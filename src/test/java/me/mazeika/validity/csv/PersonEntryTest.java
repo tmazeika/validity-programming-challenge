@@ -1,6 +1,5 @@
 package me.mazeika.validity.csv;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
