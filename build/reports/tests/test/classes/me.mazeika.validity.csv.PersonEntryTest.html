@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.009s</div>
+<div class="counter">0.014s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,9 +73,18 @@
 <a name="testConstructorBadId"></a>
 <h3 class="failures">testConstructorBadId</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -122,9 +131,18 @@
 <a name="testConstructorNullEntryLine"></a>
 <h3 class="failures">testConstructorNullEntryLine</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Expected exception: java.lang.NullPointerException
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -171,9 +189,18 @@
 <a name="testConstructorTooFewArgs"></a>
 <h3 class="failures">testConstructorTooFewArgs</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -220,9 +247,18 @@
 <a name="testConstructorTooManyArgs"></a>
 <h3 class="failures">testConstructorTooManyArgs</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -269,12 +305,10 @@
 <a name="testGetAddress1"></a>
 <h3 class="failures">testGetAddress1</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;4985 Menomonie Drive&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetAddress1(PersonEntryTest.java:92)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -282,8 +316,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -330,12 +363,10 @@
 <a name="testGetAddress2"></a>
 <h3 class="failures">testGetAddress2</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetAddress2(PersonEntryTest.java:99)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -343,8 +374,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -391,12 +421,10 @@
 <a name="testGetCity"></a>
 <h3 class="failures">testGetCity</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;Petaluma&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetCity(PersonEntryTest.java:113)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -404,8 +432,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -452,12 +479,10 @@
 <a name="testGetCompany"></a>
 <h3 class="failures">testGetCompany</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;Klein Group&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetCompany(PersonEntryTest.java:78)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -465,8 +490,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -513,12 +537,10 @@
 <a name="testGetEmail"></a>
 <h3 class="failures">testGetEmail</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;kgipp3@360.cn&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetEmail(PersonEntryTest.java:85)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -526,8 +548,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -574,12 +595,10 @@
 <a name="testGetFirstName"></a>
 <h3 class="failures">testGetFirstName</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;Kale&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetFirstName(PersonEntryTest.java:64)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -587,8 +606,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -635,12 +653,10 @@
 <a name="testGetId"></a>
 <h3 class="failures">testGetId</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;4&gt; but was:&lt;0&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.junit.Assert.assertEquals(Assert.java:631)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetId(PersonEntryTest.java:57)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -648,8 +664,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -696,12 +711,10 @@
 <a name="testGetLastName"></a>
 <h3 class="failures">testGetLastName</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;Gipp&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetLastName(PersonEntryTest.java:71)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -709,8 +722,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -757,12 +769,10 @@
 <a name="testGetPhone"></a>
 <h3 class="failures">testGetPhone</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;707-840-2551&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetPhone(PersonEntryTest.java:134)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -770,8 +780,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -818,12 +827,10 @@
 <a name="testGetStateLong"></a>
 <h3 class="failures">testGetStateLong</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;California&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetStateLong(PersonEntryTest.java:120)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -831,8 +838,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -879,12 +885,10 @@
 <a name="testGetStateShort"></a>
 <h3 class="failures">testGetStateShort</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;CA&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetStateShort(PersonEntryTest.java:127)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -892,8 +896,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -940,12 +943,10 @@
 <a name="testGetZip"></a>
 <h3 class="failures">testGetZip</h3>
 <span class="code">
-<pre>java.lang.AssertionError: expected:&lt;94975&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at me.mazeika.validity.csv.PersonEntryTest.testGetZip(PersonEntryTest.java:106)
+<pre>java.lang.IllegalArgumentException: Must have exactly 12 columns
+	at me.mazeika.validity.util.Validation.requireThat(Validation.java:18)
+	at me.mazeika.validity.csv.PersonEntry.&lt;init&gt;(PersonEntry.java:59)
+	at me.mazeika.validity.csv.PersonEntryTest.setUp(PersonEntryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -953,8 +954,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -1010,12 +1010,12 @@
 </thead>
 <tr>
 <td class="failures">testConstructorBadId</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testConstructorNullEntryLine</td>
-<td class="failures">0s</td>
+<td class="failures">0.001s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -1025,7 +1025,7 @@
 </tr>
 <tr>
 <td class="failures">testConstructorTooManyArgs</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.009s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -1040,17 +1040,17 @@
 </tr>
 <tr>
 <td class="failures">testGetCity</td>
-<td class="failures">0.001s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testGetCompany</td>
-<td class="failures">0.001s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testGetEmail</td>
-<td class="failures">0.001s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -1085,7 +1085,7 @@
 </tr>
 <tr>
 <td class="failures">testGetZip</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -1098,7 +1098,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at Oct 8, 2019, 6:00:58 PM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Oct 8, 2019, 6:23:12 PM</p>
 </div>
 </div>
 </body>

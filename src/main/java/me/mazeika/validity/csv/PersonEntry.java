@@ -1,10 +1,32 @@
 package me.mazeika.validity.csv;
 
+import me.mazeika.validity.util.Validation;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 /**
  * Represents an entry of a person's details.
  */
 public class PersonEntry
 {
+    private static final int COLUMN_COUNT = 12;
+
+    private final String raw;
+    private final int id;
+    private final String firstName;
+    private final String lastName;
+    private final String company;
+    private final String email;
+    private final String address1;
+    private final String address2;
+    private final String zip;
+    private final String city;
+    private final String stateLong;
+    private final String stateShort;
+    private final String phone;
+
     /**
      * Constructs a new PersonEntry from the given CSV entry line.
      *
@@ -12,7 +34,50 @@ public class PersonEntry
      */
     public PersonEntry(String entryLine)
     {
-        // TODO
+        Objects.nonNull(entryLine);
+
+        final List<String> columns = new ArrayList<>();
+
+        StringBuilder colBuilder = new StringBuilder();
+        boolean inQuotes = false;
+
+        for (char ch : entryLine.toCharArray()) {
+            if (ch == '"') {
+                // toggle inQuotes
+                inQuotes = !inQuotes;
+            } else if (inQuotes || ch != ',') {
+                // we're either in quotes or we're between commas
+                colBuilder.append(ch);
+            } else {
+                // we're at a comma; don't add it but also count what we've
+                // read so far as a column
+                columns.add(colBuilder.toString());
+                colBuilder = new StringBuilder();
+            }
+        }
+
+        Validation.requireThat("Must have exactly " + COLUMN_COUNT + " columns",
+                columns.size() == COLUMN_COUNT);
+
+        try {
+            this.id = Integer.parseInt(columns.get(0));
+        } catch (NumberFormatException ex) {
+            throw new IllegalArgumentException(
+                    "The ID must be an integer", ex);
+        }
+
+        this.raw = entryLine;
+        this.firstName = columns.get(1);
+        this.lastName = columns.get(2);
+        this.company = columns.get(3);
+        this.email = columns.get(4);
+        this.address1 = columns.get(5);
+        this.address2 = columns.get(6);
+        this.zip = columns.get(7);
+        this.city = columns.get(8);
+        this.stateLong = columns.get(9);
+        this.stateShort = columns.get(10);
+        this.phone = columns.get(11);
     }
 
     /**
@@ -22,7 +87,7 @@ public class PersonEntry
      */
     public int getId()
     {
-        return 0; // TODO
+        return this.id; // TODO
     }
 
     /**
@@ -32,7 +97,7 @@ public class PersonEntry
      */
     public String getFirstName()
     {
-        return null; // TODO
+        return this.firstName; // TODO
     }
 
     /**
@@ -42,7 +107,7 @@ public class PersonEntry
      */
     public String getLastName()
     {
-        return null; // TODO
+        return this.lastName; // TODO
     }
 
     /**
@@ -52,7 +117,7 @@ public class PersonEntry
      */
     public String getCompany()
     {
-        return null; // TODO
+        return this.company; // TODO
     }
 
     /**
@@ -62,7 +127,7 @@ public class PersonEntry
      */
     public String getEmail()
     {
-        return null; // TODO
+        return this.email; // TODO
     }
 
     /**
@@ -72,7 +137,7 @@ public class PersonEntry
      */
     public String getAddress1()
     {
-        return null; // TODO
+        return this.address1; // TODO
     }
 
     /**
@@ -82,7 +147,7 @@ public class PersonEntry
      */
     public String getAddress2()
     {
-        return null; // TODO
+        return this.address2; // TODO
     }
 
     /**
@@ -92,7 +157,7 @@ public class PersonEntry
      */
     public String getZip()
     {
-        return null; // TODO
+        return this.zip; // TODO
     }
 
     /**
@@ -102,7 +167,7 @@ public class PersonEntry
      */
     public String getCity()
     {
-        return null; // TODO
+        return this.city; // TODO
     }
 
     /**
@@ -113,7 +178,7 @@ public class PersonEntry
      */
     public String getStateLong()
     {
-        return null; // TODO
+        return this.stateLong; // TODO
     }
 
     /**
@@ -124,7 +189,7 @@ public class PersonEntry
      */
     public String getStateShort()
     {
-        return null; // TODO
+        return this.stateShort; // TODO
     }
 
     /**
@@ -134,7 +199,7 @@ public class PersonEntry
      */
     public String getPhone()
     {
-        return null; // TODO
+        return this.phone; // TODO
     }
 
     /**
