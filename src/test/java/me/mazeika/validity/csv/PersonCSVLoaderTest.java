@@ -3,6 +3,7 @@ package me.mazeika.validity.csv;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,13 +22,13 @@ public class PersonCSVLoaderTest
     }
 
     @Test
-    public void testLoadPeopleSize()
+    public void testLoadPeopleSize() throws IOException
     {
         assertEquals(3, this.loader.loadPeople().size());
     }
 
     @Test
-    public void testLoadPeopleProperties()
+    public void testLoadPeopleProperties() throws IOException
     {
         final List<PersonEntry> people = this.loader.loadPeople();
         final PersonEntry person1 = people.get(0);
