@@ -31,8 +31,8 @@ public class WebServer
     {
         this.tmplConfig = new Configuration();
 
-        // convert PersonEntry to its raw string form; also effectively makes
-        // a copy
+        // convert each PersonEntry to its raw string form; also effectively
+        // makes a copy
         this.duplicates = duplicates.stream()
                 .map(dups -> dups.stream()
                         .map(PersonEntry::toString)

@@ -24,7 +24,7 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
 
         final List<List<PersonEntry>> result = new ArrayList<>();
 
-        for (int i = 0; i < entries.size() - 1; i++) {
+        for (int i = 0; i < entries.size(); i++) {
             final PersonEntry p1 = entries.get(i);
             // p1 duplicates contains itself
             final List<PersonEntry> p1Duplicates = new ArrayList<>(List.of(p1));
@@ -93,8 +93,10 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
         // let's allow 1 mistake in the address1 excluding any dots (address2
         // is usually insignificant), or if one or both are empty, we can't
         // really do anything with that so we say it checks out
-        final String p1Address1 = p1.getAddress1().toLowerCase().replace(".", "");
-        final String p2Address1 = p2.getAddress2().toLowerCase().replace(".", "");
+        final String p1Address1 = p1.getAddress1().toLowerCase()
+                .replace(".", "");
+        final String p2Address1 = p2.getAddress2().toLowerCase()
+                .replace(".", "");
 
         boolean addressCheck = dist.apply(p1Address1, p2Address1) <= 1
                 || p1Address1.isEmpty() || p2Address1.isEmpty();

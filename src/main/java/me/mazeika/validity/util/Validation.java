@@ -5,6 +5,8 @@ package me.mazeika.validity.util;
  */
 public final class Validation
 {
+    private Validation() { /* utility class */ }
+
     /**
      * Requires that the given boolean expression is true, otherwise throws
      * an {@link IllegalArgumentException}.

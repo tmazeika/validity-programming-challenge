@@ -1,6 +1,6 @@
 package me.mazeika.validity;
 
-import me.mazeika.validity.csv.PersonCSVLoader;
+import me.mazeika.validity.csv.PersonCsvLoader;
 import me.mazeika.validity.csv.PersonEntry;
 import me.mazeika.validity.dedup.DuplicatePeopleFinder;
 import me.mazeika.validity.web.WebServer;
@@ -14,7 +14,13 @@ import java.util.Objects;
  */
 public class Validity
 {
-    private static final String CSV_FILE_NAME = "normal.csv";
+    private static final String NORMAL_CSV_FILE_NAME = Objects.requireNonNull(
+            Validity.class.getClassLoader().getResource("normal.csv")
+    ).getFile();
+
+    private static final String ADVANCED_CSV_FILE_NAME = Objects.requireNonNull(
+            Validity.class.getClassLoader().getResource("advanced.csv")
+    ).getFile();
 
     /**
      * Starts the program.
@@ -23,12 +29,8 @@ public class Validity
      */
     public static void main(String[] args) throws IOException
     {
-        final String normalCsvPath = Objects.requireNonNull(
-                Validity.class.getClassLoader().getResource(CSV_FILE_NAME)
-        ).getFile();
-
-        final List<PersonEntry> people = new PersonCSVLoader(normalCsvPath)
-                .loadPeople();
+        final List<PersonEntry> people = new PersonCsvLoader()
+                .load(NORMAL_CSV_FILE_NAME);
 
         final List<List<PersonEntry>> duplicates = new DuplicatePeopleFinder()
                 .findDuplicates(people);

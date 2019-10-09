@@ -12,28 +12,30 @@ import static org.junit.Assert.assertEquals;
 /**
  * Represents tests for PersonCSVLoader.
  */
-public class PersonCSVLoaderTest
+public class PersonCsvLoaderTest
 {
-    private PersonCSVLoader loader;
+    private PersonCsvLoader loader;
+    private String smallCsv;
 
     @Before
     public void setUp()
     {
-        this.loader = new PersonCSVLoader(Objects.requireNonNull(
+        this.loader = new PersonCsvLoader();
+        this.smallCsv = Objects.requireNonNull(
                 getClass().getClassLoader().getResource("small.csv")
-        ).getFile());
+        ).getFile();
     }
 
     @Test
-    public void testLoadPeopleSize() throws IOException
+    public void testLoadSize() throws IOException
     {
-        assertEquals(3, this.loader.loadPeople().size());
+        assertEquals(3, this.loader.load(this.smallCsv).size());
     }
 
     @Test
-    public void testLoadPeopleProperties() throws IOException
+    public void testLoadProperties() throws IOException
     {
-        final List<PersonEntry> people = this.loader.loadPeople();
+        final List<PersonEntry> people = this.loader.load(this.smallCsv);
         final PersonEntry person1 = people.get(0);
         final PersonEntry person2 = people.get(1);
         final PersonEntry person3 = people.get(2);

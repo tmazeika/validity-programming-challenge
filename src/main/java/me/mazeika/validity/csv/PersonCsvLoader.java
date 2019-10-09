@@ -11,34 +11,16 @@ import java.util.Scanner;
 /**
  * Represents a load of {@link PersonEntry}'s.
  */
-public class PersonCSVLoader
+public class PersonCsvLoader implements CsvLoader<PersonEntry>
 {
-    private final File csvFile;
-
-    /**
-     * Constructs a loader of {@link PersonEntry}'s.
-     *
-     * @param file the name of the file
-     */
-    public PersonCSVLoader(String file)
-    {
-        this.csvFile = new File(file);
-    }
-
-    /**
-     * Loads the people from the CSV file.
-     *
-     * @return a list of people
-     *
-     * @throws IOException when an exception occurs during reading
-     */
-    public List<PersonEntry> loadPeople() throws IOException
+    @Override
+    public List<PersonEntry> load(String csv) throws IOException
     {
         final List<PersonEntry> entries = new ArrayList<>();
 
         boolean afterHeader = false;
 
-        try (final InputStreamReader reader = new FileReader(this.csvFile);
+        try (final InputStreamReader reader = new FileReader(new File(csv));
              final Scanner scanner = new Scanner(reader)) {
 
             while (scanner.hasNextLine()) {
