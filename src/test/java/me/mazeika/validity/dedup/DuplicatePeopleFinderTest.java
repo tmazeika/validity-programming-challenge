@@ -62,9 +62,20 @@ public class DuplicatePeopleFinderTest
                 new PersonEntry("14,Guinna,Labden,Parisian-Luettgen," +
                         "glabdend@examiner.com,01 Mayer Trail,,79171," +
                         "Amarillo,Texas,TX,806-851-1176"),
+                new PersonEntry("14,Guinna,Labden,Parisian-Luettgen," +
+                        "glabdend@examiner.com,01 Mayer Trail,,79171," +
+                        "Amarillo,Texas,TX,806-851-1176"),
                 new PersonEntry("15,Jacqueline,Ilchenko,Goodwin Inc," +
                         "jilchenkoe@wisc.edu,9160 Cherokee Avenue,,18763," +
-                        "Wilkes Barre,Pennsylvania,PA,570-384-8352")));
+                        "Wilkes Barre,Pennsylvania,PA,570-384-8352"),
+                new PersonEntry("38,Gunther,Bonas," +
+                        "\"D'Amore, Fadel and Welch\",gbonas11@tripod.com," +
+                        "1487 American Parkway,Apt 1,92519,Riverside," +
+                        "California,CA,951-933-6645"),
+                new PersonEntry("38,Gunther,Bonas," +
+                        "\"D'Amore, Fadel and Welch\",gbonas11@tripod.com," +
+                        "1487 American Parkway,Apt 1,92519,Riverside," +
+                        "California,CA,951-933-6645")));
     }
 
     @Test(expected = NullPointerException.class)
@@ -79,7 +90,7 @@ public class DuplicatePeopleFinderTest
         final List<List<PersonEntry>> duplicates =
                 this.finder.findDuplicates(people);
 
-        assertEquals(9, duplicates.size());
+        assertEquals(10, duplicates.size());
     }
 
     @Test
@@ -144,6 +155,18 @@ public class DuplicatePeopleFinderTest
                 List.of(
                         new PersonEntry("14,Guinna,Labden,Parisian-Luettgen," +
                                 "glabdend@examiner.com,01 Mayer Trail,,79171," +
-                                "Amarillo,Texas,TX,806-851-1176")))));
+                                "Amarillo,Texas,TX,806-851-1176"),
+                        new PersonEntry("14,Guinna,Labden,Parisian-Luettgen," +
+                                "glabdend@examiner.com,01 Mayer Trail,,79171," +
+                                "Amarillo,Texas,TX,806-851-1176")),
+                List.of(
+                        new PersonEntry("38,Gunther,Bonas,\"D'Amore, Fadel " +
+                                "and Welch\",gbonas11@tripod.com,1487 American " +
+                                "Parkway,Apt 1,92519,Riverside,California,CA," +
+                                "951-933-6645"),
+                        new PersonEntry("38,Gunther,Bonas,\"D'Amore, Fadel " +
+                                "and Welch\",gbonas11@tripod.com,1487 American " +
+                                "Parkway,Apt 1,92519,Riverside,California,CA," +
+                                "951-933-6645")))));
     }
 }

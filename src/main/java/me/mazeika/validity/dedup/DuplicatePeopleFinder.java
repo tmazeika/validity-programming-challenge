@@ -60,6 +60,10 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
      */
     private boolean isDuplicate(PersonEntry p1, PersonEntry p2)
     {
+        if (p1.equals(p2)) {
+            return true;
+        }
+
         final LevenshteinDistance dist =
                 LevenshteinDistance.getDefaultInstance();
         final Metaphone meta = new Metaphone();
@@ -68,7 +72,7 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
 
         // let's start with names: 1 mistake allowed per 4 characters
         final int firstNameThreshold = p1.getFirstName().length() / 4 + 1;
-        final int lastNameThreshold = p1.getFirstName().length() / 4 + 1;
+        final int lastNameThreshold = p1.getLastName().length() / 4 + 1;
 
         final String p1FirstName = p1.getFirstName().toLowerCase();
         final String p2FirstName = p2.getFirstName().toLowerCase();
@@ -77,18 +81,22 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
 
         // both Levenshteins should be in range, and if so, then at least one
         // pair should be a metaphone
-        boolean nameCheck = dist.apply(p1FirstName, p2FirstName)
-                    <= firstNameThreshold
-                && dist.apply(p1LastName, p2LastName)
-                    <= lastNameThreshold
+        boolean nameCheck =
+                (p1FirstName.equals(p2FirstName)
+                        && p1LastName.equals(p2LastName))
+                || (dist.apply(p1FirstName, p2FirstName)
+                        <= firstNameThreshold
+                        && dist.apply(p1LastName, p2LastName)
+                                <= lastNameThreshold)
                 && (meta.isMetaphoneEqual(p1FirstName, p2FirstName)
-                    || meta.isMetaphoneEqual(p1LastName, p2LastName));
+                        || meta.isMetaphoneEqual(p1LastName, p2LastName));
 
         // let's allow 2 mistakes in the email
         final String p1Email = p1.getEmail().toLowerCase();
         final String p2Email = p2.getEmail().toLowerCase();
 
-        boolean emailCheck = dist.apply(p1Email, p2Email) <= 2;
+        boolean emailCheck = p1Email.equals(p2Email)
+                || dist.apply(p1Email, p2Email) <= 2;
 
         // let's allow 1 mistake in the address1 excluding any dots (address2
         // is usually insignificant), or if one or both are empty, we can't
@@ -98,14 +106,9 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
         final String p2Address1 = p2.getAddress2().toLowerCase()
                 .replace(".", "");
 
-        boolean addressCheck = dist.apply(p1Address1, p2Address1) <= 1
+        boolean addressCheck = p1Address1.equals(p2Address1)
+                || dist.apply(p1Address1, p2Address1) <= 1
                 || p1Address1.isEmpty() || p2Address1.isEmpty();
-
-        // let's allow 1 mistake in the phone, excluding any '-'s
-        final String p1Phone = p1.getPhone().replace("-", "");
-        final String p2Phone = p2.getPhone().replace("-", "");
-
-        boolean phoneCheck = dist.apply(p1Phone, p2Phone) <= 1;
 
         // check some other fields for straight equality
         boolean miscCheck = (p1.getCity().isEmpty()
@@ -115,6 +118,6 @@ public class DuplicatePeopleFinder implements DuplicateFinder<PersonEntry>
                     || p2.getStateShort().isEmpty()
                     || p1.getStateShort().equalsIgnoreCase(p2.getStateShort()));
 
-        return nameCheck && emailCheck && addressCheck && phoneCheck && miscCheck;
+        return nameCheck && emailCheck && addressCheck && miscCheck;
     }
 }
