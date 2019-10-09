@@ -79,7 +79,7 @@ public class DuplicatePeopleFinderTest
         final List<List<PersonEntry>> duplicates =
                 this.finder.findDuplicates(people);
 
-        assertEquals(3, duplicates.size());
+        assertEquals(9, duplicates.size());
     }
 
     @Test
