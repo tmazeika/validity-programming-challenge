@@ -48,7 +48,7 @@ public class WebServer
     public void start()
     {
         get("/", (req, res) -> {
-            final Template tmpl = this.tmplConfig.getTemplate("index.html");
+            final Template tmpl = this.tmplConfig.getTemplate("index.ftl");
             final StringWriter writer = new StringWriter();
             final Map<String, Object> model = new HashMap<>() {{
                 put("duplicates", duplicates);
